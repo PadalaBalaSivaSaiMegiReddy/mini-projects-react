@@ -4,7 +4,7 @@ import data from "./data"
 export default function Accordian() {
     const [selected,setSelected]=useState(null)
     const handleSingleSelection=(getCurrentId)=>{
-        console.log(getCurrentId)
+        setSelected(getCurrentId)
     }
   return (
     <div className="wrapper">
@@ -16,8 +16,15 @@ export default function Accordian() {
                         <h3>{dataItem.question}</h3>
                         <span >+</span>
                     </div>
-                </div>)
+                    {selected===dataItem.id?<div>
+                    {dataItem.answer}
+                </div>:null}
+                </div>
+                
+                )
                 :<div>No data found!!!</div>
+                
+                    
             }
         </div>
     </div>
