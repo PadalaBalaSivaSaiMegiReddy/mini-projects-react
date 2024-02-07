@@ -1,5 +1,6 @@
 import { useState } from "react"
 import data from "./data"
+import "./styles.css"
 
 export default function Accordian() {
     const [selected,setSelected]=useState(null)
@@ -7,10 +8,9 @@ export default function Accordian() {
         setSelected(getCurrentId===selected?null:getCurrentId)
     }
 
-    console.log(selected)
 
   return (
-    <center className="wrapper">
+    <div className="wrapper">
         <div className="accordian">
             {
                 data && data.length>0?
@@ -30,6 +30,6 @@ export default function Accordian() {
                     
             }
         </div>
-    </center>
+    </div>
   )
 }
