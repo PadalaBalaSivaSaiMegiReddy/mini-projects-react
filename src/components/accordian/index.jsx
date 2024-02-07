@@ -17,7 +17,7 @@ export default function Accordian() {
                         <span >+</span>
                     </div>
                     {selected===dataItem.id?<div>
-                    {dataItem.answer}
+                    <div className="content">{dataItem.answer}</div>
                 </div>:null}
                 </div>
                 
