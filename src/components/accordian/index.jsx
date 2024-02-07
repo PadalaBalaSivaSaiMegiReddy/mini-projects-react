@@ -4,10 +4,13 @@ import data from "./data"
 export default function Accordian() {
     const [selected,setSelected]=useState(null)
     const handleSingleSelection=(getCurrentId)=>{
-        setSelected(getCurrentId)
+        setSelected(getCurrentId===selected?null:getCurrentId)
     }
+
+    console.log(selected)
+
   return (
-    <div className="wrapper">
+    <center className="wrapper">
         <div className="accordian">
             {
                 data && data.length>0?
@@ -27,6 +30,6 @@ export default function Accordian() {
                     
             }
         </div>
-    </div>
+    </center>
   )
 }
