@@ -4,6 +4,8 @@ import "./styles.css"
 
 export default function Accordian() {
     const [selected,setSelected]=useState(null)
+    const [enableMultiSelect,setEnableMultiSelect]=useState(false)
+    const [multiple,setMultiple]=useState([])
     const handleSingleSelection=(getCurrentId)=>{
         setSelected(getCurrentId===selected?null:getCurrentId)
     }
@@ -11,6 +13,7 @@ export default function Accordian() {
 
   return (
     <div className="wrapper">
+        <button>ENABLE MULTI-SELECTION</button>
         <div className="accordian">
             {
                 data && data.length>0?
