@@ -9,21 +9,31 @@ export default function Accordian() {
     const handleSingleSelection=(getCurrentId)=>{
         setSelected(getCurrentId===selected?null:getCurrentId)
     }
-
-    console.log(enableMultiSelect);
+    const handleMultiSelection=(getCurrentId)=>{
+        let copyMultiple=[...multiple]
+        let findIndexOfId=copyMultiple.indexOf(getCurrentId);
+        if(findIndexOfId===-1){
+            copyMultiple.push(getCurrentId)
+        }
+        else{
+            copyMultiple.splice(findIndexOfId,1)
+        }
+        setMultiple(copyMultiple)
+    }
+    console.log(selected,multiple)
   return (
     <div className="wrapper">
-        <button onClick={()=>setEnableMultiSelect(!enableMultiSelect)}>ENABLE MULTI-SELECTION</button>
+        <button onClick={()=>setEnableMultiSelect(!enableMultiSelect)} style={enableMultiSelect?{"background-color":"rgb(61, 187, 61)"}:{"background-color":"rgb(241, 88, 88)"}}>ENABLE MULTI-SELECTION</button>
         
         <div className="accordian">
             {
                 data && data.length>0?
                 data.map(dataItem=><div className="item" key={Math.random()}>
-                    <div className="title" onClick={()=>handleSingleSelection(dataItem.id)}>
+                    <div className="title" onClick={enableMultiSelect?()=>handleMultiSelection(dataItem.id):()=>handleSingleSelection(dataItem.id)}>
                         <h3>{dataItem.question}</h3>
-                        <span >+</span>
+                        <span >{(selected===dataItem.id ||multiple.includes(dataItem.id))?"-":"+"}</span>
                     </div>
-                    {selected===dataItem.id?<div>
+                    {(selected===dataItem.id ||multiple.includes(dataItem.id))?<div>
                     <div className="content">{dataItem.answer}</div>
                 </div>:null}
                 </div>
