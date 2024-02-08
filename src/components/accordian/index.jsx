@@ -10,10 +10,11 @@ export default function Accordian() {
         setSelected(getCurrentId===selected?null:getCurrentId)
     }
 
-
+    console.log(enableMultiSelect);
   return (
     <div className="wrapper">
-        <button>ENABLE MULTI-SELECTION</button>
+        <button onClick={()=>setEnableMultiSelect(!enableMultiSelect)}>ENABLE MULTI-SELECTION</button>
+        
         <div className="accordian">
             {
                 data && data.length>0?
