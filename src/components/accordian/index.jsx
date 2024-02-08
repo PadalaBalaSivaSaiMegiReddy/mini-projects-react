@@ -23,7 +23,7 @@ export default function Accordian() {
     console.log(selected,multiple)
   return (
     <div className="wrapper">
-        <button onClick={()=>setEnableMultiSelect(!enableMultiSelect)} style={enableMultiSelect?{"background-color":"rgb(61, 187, 61)"}:{"background-color":"rgb(241, 88, 88)"}}>ENABLE MULTI-SELECTION</button>
+        <button onClick={()=>setEnableMultiSelect(!enableMultiSelect)} style={enableMultiSelect?{"backgroundColor":"rgb(61, 187, 61)"}:{"backgroundColor":"rgb(241, 88, 88)"}}>ENABLE MULTI-SELECTION</button>
         
         <div className="accordian">
             {
