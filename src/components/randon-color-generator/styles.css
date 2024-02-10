@@ -1,0 +1,10 @@
+.RandomColorGenerator{
+    height: 100vh;
+    background-color: rgb(224, 126, 236);
+}
+
+.topBtnsBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
