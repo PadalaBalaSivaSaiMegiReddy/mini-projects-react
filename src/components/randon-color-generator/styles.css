@@ -2,10 +2,12 @@
     height: 100vh;
     background-color: rgb(160, 127, 187);
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .topBtnsBar{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
