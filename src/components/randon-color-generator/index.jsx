@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./styles.css"
 
 export default function RandomColorGenerator() {
@@ -26,10 +26,16 @@ export default function RandomColorGenerator() {
     let b=randomColorUtility(256)
     let rgbColor=`rgb(${r},${g},${b})`
     setColor(rgbColor)
-
-
-
   }
+
+  useEffect(()=>{
+    if(typeOfColorFormat==="hex"){
+      handleHexColorGenerator()
+    }
+    else{
+      handleRBGColorGenerator()
+    }
+  },[typeOfColorFormat])
   return (
     <div className="RandomColorGenerator" style={{background:color}}>
         <div className="topBtnsBar">
