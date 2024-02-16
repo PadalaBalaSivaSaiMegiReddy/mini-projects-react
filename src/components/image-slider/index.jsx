@@ -18,8 +18,8 @@ export default function ImageSlider({url,limit}) {
         }
 
       }catch(e){
-        setLoading(false)
         setErrorMsg(e.message)
+        setLoading(false)
       }
 
     }
@@ -27,6 +27,14 @@ export default function ImageSlider({url,limit}) {
     useEffect(()=>{
       if(url!=='') fetchImages(url)
     },[url])
+
+    if(loading){
+      return <div>Loading Data!!! Please Wait</div>
+    }
+
+    if(errorMsg!==null){
+      return <div>Error occurred {errorMsg}</div>
+    }
     
   return (
     <div className="image-slider">index</div>
