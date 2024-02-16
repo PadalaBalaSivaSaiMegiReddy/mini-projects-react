@@ -25,10 +25,13 @@
 
 .arrow-left{
     left: 1rem;
+    cursor: pointer;
 }
 
 .arrow-right{
     right: 1rem;
+    cursor: pointer;
+
 }
 
 .circle-indicators{
@@ -55,4 +58,11 @@
 
 .hide-current-indicator{
     background-color: gray;
+}
+
+.page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

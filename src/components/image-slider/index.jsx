@@ -49,6 +49,7 @@ export default function ImageSlider({url,limit=5,page=1}) {
     }
     
   return (
+    <div className="page">
     <div className="image-slider">
       <BsArrowLeftCircleFill onClick={handlePrevious} className="arrow arrow-left"/>
       {
@@ -68,6 +69,7 @@ export default function ImageSlider({url,limit=5,page=1}) {
           images && images.length?images.map((_,index)=>(<button onClick={()=>setCurrentSlide(index)} key={index} className={currentSlide===index?"current-indicator":"current-indicator hide-current-indicator"}></button>)):null
         }
       </span>
+    </div>
     </div>
   )
 }
