@@ -25,15 +25,18 @@ export default function LoadMoreData() {
   const [loading,setLoading]=useState(false);
   const[products,setProducts]=useState([]);
   const[count,setCount]=useState(0);
-  useEffect(()=>{fetchProducts()},[products])
+  useEffect(()=>{fetchProducts()},[])
 
-  if(loading){
-    return <div>Loading data. Please wait!!!</div>
-  }
   
-  return (
-    <div className='loadMoreData'>
+return(
+  <div className='loadMoreData'>
+  {loading?
+     (<div>Loading data. Please wait!!!</div>):
+   (
+    <>
       LOADMOREDATA
-    </div>
+    </>
   )
+}</div>)
+
 }
