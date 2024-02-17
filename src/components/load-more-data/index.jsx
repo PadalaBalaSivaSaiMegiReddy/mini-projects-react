@@ -8,8 +8,12 @@ export default function LoadMoreData() {
     try{
       const response = await fetch(`https://dummyjson.com/products?limit=20&skip=${count===0?0:count*20}`)
       const data = await response.json();
-      setLoading(false);
-      setProducts(data)
+      if(data && data.products&& data.products.length){
+        setProducts(data.products)
+        setLoading(false);
+        console.log(products)
+      }
+      
 
     }catch(e){
       console.log(e)
@@ -23,7 +27,13 @@ export default function LoadMoreData() {
   const[count,setCount]=useState(0);
   useEffect(()=>{fetchProducts()},[products])
 
+  if(loading){
+    return <div>Loading data. Please wait!!!</div>
+  }
+  
   return (
-    <div className='loadMoreData'>LoadMoreData</div>
+    <div className='loadMoreData'>
+      LOADMOREDATA
+    </div>
   )
 }
