@@ -6,7 +6,7 @@ export default function LoadMoreData() {
   async function fetchProducts(){
     setLoading(true)
     try{
-      const response = await fetch(`https://dummyjson.com/products?limit=20&skip=${count===0?0:count*10}`)
+      const response = await fetch(`https://dummyjson.com/products?limit=20&skip=${count===0?0:count*20}`)
       const data = await response.json();
       setLoading(false);
       setProducts(data)
@@ -21,8 +21,7 @@ export default function LoadMoreData() {
   const [loading,setLoading]=useState(false);
   const[products,setProducts]=useState([]);
   const[count,setCount]=useState(0);
-  useEffect(()=>{fetchProducts()},[])
-  console.log(products)
+  useEffect(()=>{fetchProducts()},[products])
 
   return (
     <div className='loadMoreData'>LoadMoreData</div>
