@@ -22,3 +22,9 @@
     width: 200px;
     height: 200px;
 }
+
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
