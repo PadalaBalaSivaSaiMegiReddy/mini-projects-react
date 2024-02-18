@@ -36,9 +36,10 @@ return(
     <>
     {
       products.map((item)=>
-      <div key={item.id}>
-        {item.id}
-      </div>)
+      <div key={item.id} className='product-container'>
+        {products&&products.length?<div className='product'><img src={item.thumbnail} alt={item.title}/>  
+        <p>{item.title}</p></div>:null  }
+          </div>)
     }
     </>
   )
