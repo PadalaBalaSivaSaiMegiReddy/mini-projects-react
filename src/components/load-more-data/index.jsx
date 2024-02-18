@@ -34,7 +34,12 @@ return(
      (<div>Loading data. Please wait!!!</div>):
    (
     <>
-      LOADMOREDATA
+    {
+      products.map((item)=>
+      <div key={item.id}>
+        {item.id}
+      </div>)
+    }
     </>
   )
 }</div>)
