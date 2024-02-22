@@ -5,7 +5,7 @@ export default function MenuList({list=[]}) {
     <div className='menu-list-container'>
         {
             list&&list.length?
-            list.map(listItem=><MenuItem key={listItem} item={listItem}/>)
+            list.map(listItem=><MenuItem item={listItem}/>)
             :null
         }
     </div>
