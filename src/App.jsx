@@ -3,7 +3,8 @@ import Accordian from './components/accordian'
 import ImageSlider from './components/image-slider'
 import LightDarkMode from './components/light-dark-mode'
 import LoadMoreData from './components/load-more-data'
-import RandomColorGenerator from './components/randon-color-generator'
+import RandomColorGenerator from './components/random-color-generator'
+import ScrollIndicator from './components/scroll-indicator'
 import StarRating from './components/star-rating'
 import TreeView from './components/tree-view'
 import menus from './components/tree-view/data'
@@ -21,7 +22,8 @@ function App() {
       {/* <LoadMoreData/> */}
       {/* <TreeView menus={menus}/> */}
       {/* <QrCodeGenerator/> */}
-      <LightDarkMode/>
+      {/* <LightDarkMode/> */}
+      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
     </div>
   )
 }
