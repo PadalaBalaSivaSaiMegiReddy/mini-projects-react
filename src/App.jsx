@@ -9,6 +9,7 @@ import StarRating from './components/star-rating'
 import TreeView from './components/tree-view'
 import menus from './components/tree-view/data'
 import QRCodeGenerator from './components/qr-code-generator'
+import TabTest from './components/custom-tabs/tab-test'
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
       {/* <QrCodeGenerator/> */}
       {/* <LightDarkMode/> */}
       {/* <QRCodeGenerator/> */}
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
+      {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
+      <TabTest/>
     </div>
   )
 }
