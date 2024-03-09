@@ -1,17 +1,18 @@
 import './modal.css'
 
-function Modal({id,header,body,footer}) {
+function Modal({id,header,body,footer,onClose}) {
   return (
     <div id={id||'Modal'} className='modal'>
-        <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}} className="modal-content">
+        <div style={{ gap:"10px",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}} className="modal-content">
             <div className="header">
-                <span className='close-modal-icon'>&times;</span>
+                <span style={{cursor:"pointer",position:"relative", fontSize:"20px", top:"0px",left:"500px",fontWeight:"bold"}} onClick={onClose} className='close-modal-icon'>&times;</span>
                 <h2>{header?header:"Header"}</h2>
             </div>
-            <div className="body"></div>
+            <div className="body">
             {body?body:<div>
                 <p>This is our Modal Body.</p>
                 </div>}
+                </div>
             <div className="footer">
                 {footer?footer:<h2>Footer</h2>}
             </div>
