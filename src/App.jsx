@@ -11,6 +11,7 @@ import menus from './components/tree-view/data'
 import QRCodeGenerator from './components/qr-code-generator'
 import TabTest from './components/custom-tabs/tab-test'
 import ModalTest from './components/custom-modal-popup/modal-test'
+import GithubProfileFinder from './components/github-profile-finder/GithubProfileFinder'
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
       {/* <QRCodeGenerator/> */}
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
       {/* <TabTest/> */}
-      <ModalTest/>
+      {/* <ModalTest/> */}
+      <GithubProfileFinder/>
           </div>
   )
 }
