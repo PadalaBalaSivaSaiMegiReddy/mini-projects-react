@@ -17,7 +17,7 @@ export default function User({ user }) {
         <img src={avatar_url} className="avatar" alt="User" />
       </div>
       <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}className="name-container">
-        <a  href={`https://github.com/${login}`}><h1 style={{color:"tomato"}}>{name || login}</h1></a>
+        <a target="_blank"  href={`https://github.com/${login}`}><h1 style={{color:"tomato"}}>{name || login}</h1></a>
         <p  style={{color:"lightgreen"}}>
           User joined on{" "}
           {`${createdDate.getDate()} ${createdDate.toLocaleString("en-us", {
