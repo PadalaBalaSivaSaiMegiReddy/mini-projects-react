@@ -12,6 +12,7 @@ import QRCodeGenerator from './components/qr-code-generator'
 import TabTest from './components/custom-tabs/tab-test'
 import ModalTest from './components/custom-modal-popup/modal-test'
 import GithubProfileFinder from './components/github-profile-finder/GithubProfileFinder'
+import SearchAutoComplete from './components/search-autocomplete-with-api/SearchAutoComplete'
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
       {/* <TabTest/> */}
       {/* <ModalTest/> */}
-      <GithubProfileFinder/>
+      {/* <GithubProfileFinder/> */}
+      <SearchAutoComplete/>
           </div>
   )
 }
