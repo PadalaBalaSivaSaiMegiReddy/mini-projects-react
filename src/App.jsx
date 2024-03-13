@@ -13,6 +13,7 @@ import TabTest from './components/custom-tabs/tab-test'
 import ModalTest from './components/custom-modal-popup/modal-test'
 import GithubProfileFinder from './components/github-profile-finder/GithubProfileFinder'
 import SearchAutoComplete from './components/search-autocomplete-with-api/SearchAutoComplete'
+import TicTacToe from './components/tic-tac-teo/TicTacToe'
 
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
       {/* <TabTest/> */}
       {/* <ModalTest/> */}
       {/* <GithubProfileFinder/> */}
-      <SearchAutoComplete/>
+      {/* <SearchAutoComplete/> */}
+      <TicTacToe/>
           </div>
   )
 }
