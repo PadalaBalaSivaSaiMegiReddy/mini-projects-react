@@ -1,15 +1,16 @@
 .ticTacToeContainer{
-  
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 100px;
+        justify-content: center;
+       height: 100vh;
       
 }
 
+
 .square{
     border: 1px solid red;
-    /* float: left; */
+    float: left;
     font-size: 40px;
     height: 100px;
     padding: 0px;
@@ -18,4 +19,9 @@
     margin-right: -10px;
     margin-top: -10px;
     cursor: pointer;
+}
+
+.restartBtn{
+    padding: 5px;
+    width: 100px;
 }
