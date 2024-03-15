@@ -53,6 +53,7 @@ function TicTacToe() {
   };
 
   useEffect(()=>{
+    
     if(!getWinner(squares) && squares.every(item=>item!=="")){
       setStatus("This game is a draw! Restart to play again.")
     }else if(getWinner(squares)){
