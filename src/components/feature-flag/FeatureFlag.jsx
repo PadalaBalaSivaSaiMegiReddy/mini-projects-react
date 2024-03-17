@@ -48,7 +48,7 @@ export default function FeatureFlags() {
 
   return (
     <div>
-      <h1>Feature Flags</h1>
+      <h1 style={{textAlign:"center", color:"GrayText"}}>Feature Flags</h1>
       {componentsToRender.map((componentItem) =>
         checkEnabledFlags(componentItem.key) ? componentItem.component : null
       )}
