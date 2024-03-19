@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import LightDarkMode from "../light-dark-mode";
-import TicTacToe from "../tic-tac-teo/TicTacToe";
+import TicTacToe from "../tic-tac-toe/TicTacToe";
 import RandomColorGenerator from "../random-color-generator";
 import Accordian from "../accordian";
 import TreeView from "../tree-view";
