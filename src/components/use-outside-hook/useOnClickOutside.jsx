@@ -19,7 +19,6 @@ function useOnClickOutside(ref, handler) {
     }
   }, [handler, ref]);
 
-  return <div>useOnClickOutside</div>;
 }
 
 export default useOnClickOutside;
