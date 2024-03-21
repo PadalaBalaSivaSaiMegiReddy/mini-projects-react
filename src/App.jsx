@@ -18,6 +18,7 @@ import FeatureFlagGlobalState from './components/feature-flag/context/Context'
 import FeatureFlag from './components/feature-flag/FeatureFlag'
 import UseFetchHookTest from './components/use-fetch/UseFetchHookTest'
 import UseOnClickOutsideTest from './components/use-outside-hook/UseOnClickOutsideTest'
+import UseWindowResizeTest from './components/use-window-resize/UseWindowResizeTest'
 
 
 function App() {
@@ -43,7 +44,8 @@ function App() {
       <FeatureFlag/>
       </FeatureFlagGlobalState> */}
       {/* <UseFetchHookTest/> */}
-      <UseOnClickOutsideTest/>
+      {/* <UseOnClickOutsideTest/> */}
+      <UseWindowResizeTest/>
           </div>
   )
 }
