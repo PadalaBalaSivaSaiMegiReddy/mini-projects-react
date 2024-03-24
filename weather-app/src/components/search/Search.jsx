@@ -1,8 +1,14 @@
 import "./Search.css";
 
 function Search({ handleSearch, setSearch, search }) {
+
+  function handleSubmit(e){
+    e.preventDefault();
+    handleSearch();
+  }
+
   return (
-    <div className="search-engine">
+    <form className="search-engine" onSubmit={handleSubmit}>
       <input
         type="text"
         className="city-search"
@@ -10,10 +16,10 @@ function Search({ handleSearch, setSearch, search }) {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
-      <button className="search-btn" onClick={handleSearch}>
+      <button type="submit" className="search-btn" onClick={handleSearch}>
         search
       </button>
-    </div>
+    </form>
   );
 }
 
