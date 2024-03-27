@@ -1,13 +1,24 @@
-import './App.css'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home";
+import Favorites from "./pages/favorites/Favorites";
+import Details from "./pages/details/Details";
 
 function App() {
-
   return (
     <>
-    <h1 className="text-yellow-300">App</h1>
-
+      <div className=" min-h-screen p-6 bg-white text-gray-600 text-lg">
+        <Navbar />
+        <Routes>
+          <Route />
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/recipe-item/:id" element={<Details />} />
+        </Routes>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
