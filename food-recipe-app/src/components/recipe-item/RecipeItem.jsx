@@ -1,6 +1,6 @@
 import "./RecipeItem.css";
 
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function RecipeItem({ item }) {
   return (
@@ -12,9 +12,14 @@ function RecipeItem({ item }) {
         <span className="text-sm text-cyan-700 font-medium">
           {item?.publisher}
         </span>
-        <h3 className="font-bold text-2xl truncate text-black">{item?.title}</h3>
-        <Link className="text-sm p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wide inline-block shadow-md bg-black text-white" to={`/recipe-item/${item?.id}`}>
-        Recipe Details
+        <h3 className="font-bold text-2xl truncate text-black">
+          {item?.title}
+        </h3>
+        <Link
+          className="text-sm p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wide inline-block shadow-md bg-black text-white"
+          to={`/recipe-item/${item?.id}`}
+        >
+          Recipe Details
         </Link>
       </div>
     </div>
