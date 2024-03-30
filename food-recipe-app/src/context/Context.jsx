@@ -6,6 +6,7 @@ export default function ContextProvider({ children }) {
   const [searchParam, setSearchParam] = useState("");
   const [loading, setLoading] = useState(false);
   const [recipeList, setRecipeList] = useState([]);
+  const [recipeDetailsData, setRecipeDetailsData] = useState(null);
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
@@ -27,7 +28,15 @@ export default function ContextProvider({ children }) {
 
   return (
     <Context.Provider
-      value={{ searchParam, loading, recipeList, setSearchParam, handleSubmit }}
+      value={{
+        searchParam,
+        loading,
+        recipeList,
+        setSearchParam,
+        handleSubmit,
+        recipeDetailsData,
+        setRecipeDetailsData,
+      }}
     >
       {children}
     </Context.Provider>

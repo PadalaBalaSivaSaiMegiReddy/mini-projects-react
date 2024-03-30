@@ -8,11 +8,11 @@ function Home() {
   if (loading) {
     return <h1>Loading...</h1>;
   }
-  console.log(recipeList);
+
   return (
     <div className="py-8 container mx-auto flex flex-wrap justify-center gap-10">
       {recipeList && recipeList.length > 0 ? (
-        recipeList.map((item) => <RecipeItem item={item} />)
+        recipeList.map((item) => <RecipeItem key={item.id} item={item} />)
       ) : (
         <div>
           <p
