@@ -1,11 +1,18 @@
-import "./App.css";
+
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Cart from "./pages/cart/Cart";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <>
-      <div className=" min-h-screen p-6 bg-white text-gray-600 text-lg">
-        Hi
+      <div className=''>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+        </Routes>
       </div>
     </>
   );
