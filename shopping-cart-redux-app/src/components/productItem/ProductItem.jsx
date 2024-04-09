@@ -1,8 +1,10 @@
 
-export default function ProductItem({products}) {
+export default function ProductItem({product}) {
   return (
     <div>
-        products.map()
+      <img src={product.image} alt="" />
+      <span>{product.title}</span>
+      <button>Add to cart</button>
     </div>
   )
 }
